@@ -1,6 +1,6 @@
 .large-hero {
-	border: 1px solid navy;
 	position: relative;
+	/*border: 1px solid navy;*/
 	/*background-color: orange;	for see better*/
 	
 	&__text-content{
@@ -38,4 +38,3 @@
 	}
 	
 }
-

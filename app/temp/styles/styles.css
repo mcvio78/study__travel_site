@@ -436,7 +436,6 @@ img {
 }
 
 .large-hero {
-	border: 1px solid navy;
 	position: relative;
 	
 }
@@ -453,6 +452,8 @@ img {
 		text-align: center;
 		/*background-color: green;	for see better*/
 	}
+
+/*border: 1px solid navy;*/
 
 .large-hero__title {
 		font-weight: 300;
@@ -495,3 +496,4 @@ img {
 		font-weight: 500;
 		padding: 1.1rem 2.2rem;
 	}
+
