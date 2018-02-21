@@ -10,3 +10,11 @@ img {
 	margin-right: auto;
 	display: block;	until here*/
 }
+
+* {
+		box-sizing: border-box;
+}
+
+a {
+	color: $mainOrange;
+}
