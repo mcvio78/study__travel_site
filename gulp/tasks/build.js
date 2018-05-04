@@ -5,7 +5,13 @@ usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
 uglify = require('gulp-uglify'),
-browserSync = require('browser-sync').create();
+browserSync = require('browser-sync').create(),
+ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', ['usemin'], function() {
+  return gulp.src('./docs/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('previewDist', function() {
 	
@@ -16,7 +22,6 @@ gulp.task('previewDist', function() {
 		}
 	});
 });
-
 
 gulp.task('deleteDestFolder', ['icons'], function() {
 	return del("./docs");
@@ -60,4 +65,4 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
 		.pipe(gulp.dest("./docs"));
 });
 
-gulp.task('build', ['deleteDestFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
+gulp.task('build', ['deleteDestFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger', 'deploy']);
